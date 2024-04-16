@@ -6,7 +6,10 @@ T = TypeVar('T')
 
 def parseDelimited(data: Any, cls: Type[T]) -> tuple[Type[T], int]:
     if data:
-        size, ind = _DecodeVarint32(data, 0)
+        try:
+            size, ind = _DecodeVarint32(data, 0)
+        except:
+            raise IndexError
         if size + ind <= len(data): 
             message = cls()
             try:
