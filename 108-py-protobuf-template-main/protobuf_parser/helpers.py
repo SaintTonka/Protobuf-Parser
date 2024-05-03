@@ -8,8 +8,9 @@ def parseDelimited(data: Any, cls: Type[T]) -> tuple[Type[T], int]:
     if data:
         try:
             size, ind = _DecodeVarint32(data, 0)
-        except:
-            raise IndexError
+        except IndexError:
+            return None, 0  
+
         if size + ind <= len(data): 
             message = cls()
             try:
