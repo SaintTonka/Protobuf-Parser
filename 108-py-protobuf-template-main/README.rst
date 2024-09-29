@@ -1,7 +1,5 @@
-108-py-protobuf-template
+Разбор потока length-prefixed Protobuf сообщений на Python
 ========================
-
-Шаблонный репозиторий задания "Разбор потока length-prefixed Protobuf сообщений на Python" (LEARNING_CENTER-108)
 
 Virtual environment
 ===================
